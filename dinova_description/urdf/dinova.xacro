@@ -4,6 +4,8 @@
     <xacro:arg name="load_gripper" default="true"/>
     <xacro:arg name="dingo_real_urdf" default="true"/>
     <xacro:arg name="lidar" default="true"/>
+    
+    <xacro:arg name="use_collision" default="true"/>
 
     <xacro:property name="platform_height" value="0.314" />
 
@@ -98,4 +100,11 @@
             <child link="$(arg robot_id)kinova_base_link"/>
         </joint>
     </xacro:unless>
+
+          <!-- Add extra hard-coded collision spheres  -->
+    <!-- <xacro:include filename="$(find dinova_description)/urdf/collision_links_full.urdf.xacro" /> -->
+    <xacro:include filename="$(find dinova_description)/urdf/collision_links_macro.xacro" />
+    <xacro:collision_spheres use_collision="$(arg use_collision)" prefix="$(arg robot_id)" />
+
+
 </robot>
