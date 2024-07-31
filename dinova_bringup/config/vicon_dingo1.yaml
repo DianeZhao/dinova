@@ -6,11 +6,33 @@ object_names:
   - "cup1"
   - "cup2"
   - "wineglass"
+  - "dynamic_object1"
   - "dynamic_object2"
+  - "dynamic_object3"
+  - "dynamic_object4"
+  - "dynamic_object5"
+#for convinience, to load them in rosparam server
+#their information are only published by a vicon_smulator
+#to test the computation time of mpc
+  - "ghost_dynamic_object1"
+  - "ghost_dynamic_object2"
+  - "ghost_dynamic_object3"
+  - "ghost_dynamic_object4"
+  - "ghost_dynamic_object5"
 object_msg_types: # "geometry_msgs/{PoseStamped,TransformStamped,PoseWithCovarianceStamped}"
   - "geometry_msgs/PoseStamped"
   - "geometry_msgs/PoseStamped"
   - "geometry_msgs/PoseStamped"
+  - "geometry_msgs/PoseStamped"
+  - "geometry_msgs/PoseStamped"
+  - "geometry_msgs/PoseStamped"
+  - "geometry_msgs/PoseStamped"
+  - "geometry_msgs/PoseStamped"
+  - "geometry_msgs/PoseStamped"
+  - "geometry_msgs/PoseStamped"
+  - "geometry_msgs/PoseStamped"
+  - "geometry_msgs/PoseStamped"
+
   - "geometry_msgs/PoseStamped"
   - "geometry_msgs/PoseStamped"
   - "geometry_msgs/PoseStamped"
@@ -25,10 +47,30 @@ object_frame_ids:
   - "map"
   - "map"
   - "map"
+  - "map"
+  - "map"
+  - "map"
+  - "map"
+
+  - "map"
+  - "map"
+  - "map"
+  - "map"
+  - "map"
 object_frequency_divider:
   - 2
   - 2
   - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+
   - 2
   - 2
   - 2
@@ -42,4 +84,14 @@ object_publish_topics:
   - "/vicon/cup1"
   - "/vicon/cup2"
   - "/vicon/wineglass"
+  - "/vicon/dynamic_object1"
   - "/vicon/dynamic_object2"
+  - "/vicon/dynamic_object3"
+  - "/vicon/dynamic_object4"
+  - "/vicon/dynamic_object5"
+
+  - "/vicon/ghost_dynamic_object1"
+  - "/vicon/ghost_dynamic_object2"
+  - "/vicon/ghost_dynamic_object3"
+  - "/vicon/ghost_dynamic_object4"
+  - "/vicon/ghost_dynamic_object5"
